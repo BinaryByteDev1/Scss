@@ -1,0 +1,43 @@
+$primary-color: rgb(42, 37, 37);
+$secondry-color: royalblue;
+$text-color: white;
+$text-color-2: orange;
+
+
+
+@function weigth($weight-name) {
+    @return map-get($font-weights , $weight-name );
+}
+
+@function backgrounds($backgroundColor){
+    @return map-get($bg-Color , $backgroundColor);
+}
+
+
+$font-weights: (
+    "font" : bold,
+    "text" : capitalize
+
+);
+
+$font-families: (
+    "font1" : monospace,
+    "font2" : serif ,
+    "font3" : sans-serif
+
+);
+
+$text-alignments: (
+    "alignment1" : center,
+    "alignment2" : justify,
+    "alignment3" : "right",
+    "alignment4" : "left"
+);
+
+$bg-Color: (
+    "bg-color1" : royalblue,
+    "bg-color2" : #41e146,
+    "bg-color3" : orange,
+    "bg-color4" : #e141cc65
+
+);

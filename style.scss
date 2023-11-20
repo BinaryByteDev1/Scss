@@ -1,0 +1,78 @@
+@import './reset';
+@import './variables';
+
+@mixin flexing($direction , $colGap , $rowGap){
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: $direction;
+    column-gap: $colGap;
+    row-gap: $rowGap;
+
+}
+
+
+body{
+    background-color: backgrounds(bg-color1);
+    padding: 20px 10px;
+
+}
+
+.main{
+    @include flexing(row , 40px , 10px);
+    padding: 20px;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+    background-color: backgrounds(bg-color3);
+}
+
+.main p{
+    font-weight: weigth(font);
+    font-family: map-get($font-families, font1);
+    font-size: 16px;
+    text-align: map-get($text-alignments , alignment2);
+    color: $text-color;
+}
+
+body{
+    .main2{
+        width: 80%;
+        margin: 0 auto;
+        background-color: backgrounds(bg-color3);
+        padding: 10px 20px;
+        & p{
+            font-weight: map-get($font-weights , font);
+            color: $text-color;
+            font-family: map-get($font-families , font1);
+            text-align: map-get($text-alignments , alignment2);
+            font-size: 16px;
+        }
+        & h2{
+            color: $text-color-2;
+            font-family: map-get($font-families , font3);
+        }
+    }
+}
+
+// .main3{
+//     width: 80%;
+//     margin: 0 auto;
+
+//     #{&} .para{
+//         color: $text-color-2;
+//     }
+//     &:hover{
+//         color: red;
+//         cursor: pointer;
+//     }
+// }
+
+.main3 {
+    width: 80%;
+    margin: 0 auto;
+    p{
+        font-weight: weigth(font);
+
+    }
+}
